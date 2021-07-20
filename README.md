@@ -1,4 +1,6 @@
 # NYT-Bestsellers
+Judge a book by its cover. 
+This project aims to give you acess to New York Times Bestsellers of new and old. Users will be able to select a date to see Bestsellers and then find more information on those select books. 
 
 ## Getting Started
 
@@ -26,6 +28,14 @@ A list of NYT best seller books are shown,
 And If i click on the book title within the list, 
 Then a book cover is displayed as well as more information on said book.
 
-### Apis Tp be used. 
+### Apis To be used. 
 * [Open Library API](https://openlibrary.org/developers/api)
 * [New York Times API](https://developer.nytimes.com/docs/books-product/1/overview)
+
+### Tasks Breakdown
+* Home Page - Lorenzo 
+* Results Page - Lara 
+* Research API - Lara, Zachery
+* Handling NYT API - Lara, Zachery, Lorenzo
+* Handling Open Library API - Lara, Zachery, Lorenzo
+* Bringing it all together - Lara, Zachery, Lorenzo
