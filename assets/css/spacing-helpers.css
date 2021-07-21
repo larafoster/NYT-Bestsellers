@@ -1,3 +1,7 @@
+
+.padding.left-130 {
+    padding-left: 130px;
+}
 /* source: https://gist.github.com/dashw00d/65014f887b5ec0bf3eda9d5e40b0816e */
 
 .margin.top-0{
@@ -276,6 +280,9 @@
 .margin.s-all-20{
     margin:20px
 }
+
+
+
 @media only screen and (min-width:601px){
     .row .col.offset-m0{
         margin-left:auto
