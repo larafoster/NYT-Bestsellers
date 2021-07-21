@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Judge a Book - the Cover</title>
+
+    <!-- CSS  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="./assets/css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="./assets/css/syle.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+  </head>
+  <body>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">OSU Bootcamp</a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a
+              href="https://github.com/larafoster/NYT-Bestsellers"
+              target="_blank"
+            >
+              github repo
+            </a>
+          </li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="https://github.com/larafoster/NYT-Bestsellers"
+              target="_blank">github repo</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="col s12 m7">
+        <h2 class="header">Judge a Book by its Cover</h2>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img
+              src="http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg"
+            />
+          </div>
+
+          <div class="card-stacked">
+    <ul class="collection">
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+    </ul>
+            <div class="card-action">
+              <a href="index.html">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div id="content"></div>
+    <script>
+      function handleResponse(response) {
+      for (var i = 0; i < response.items.length; i++) {
+        var item = response.items[i];
+        // in production code, item.text should have the HTML entities escaped.
+        document.getElementById("content").innerHTML += "<br>" + item.volumeInfo.title;
+      }
+    }
+    </script>
+    <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script>
+
+      <br />
+      <br />
+    </div>
+
+    <footer class="page-footer orange">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Project Info</h5>
+            <p class="grey-text text-lighten-4">
+              This project was developed by students at OSU Full Stack Bootcamp
+              and is intended for educational purposes only.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          Made by
+          <a
+            class="orange-text text-lighten-3"
+            href="https://github.com/larafoster/NYT-Bestsellers"
+          >
+            Team LLZ
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+  </body>
+</html>
