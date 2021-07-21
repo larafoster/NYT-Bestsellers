@@ -29,7 +29,7 @@
       rel="stylesheet"
       media="screen,projection"
     />
-            <link
+      <link
       href="./assets/css/spacing-helpers.css"
       type="text/css"
       rel="stylesheet"
@@ -37,9 +37,10 @@
     />
   </head>
 <body>
+  <header>
     <nav class="light-blue lighten-1" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">OSU Bootcamp</a>
+        <a id="logo-container" href="#" class="brand-logo">Judge a Book...</a>
         <ul class="right hide-on-med-and-down">
           <li>
             <a
@@ -60,19 +61,18 @@
         </a>
       </div>
     </nav>
-  <header>
-    <h1 class="header-title p-left-130">Judge a Book by its Cover</h1>
-</header>
+  </header>
 
 <main class="container row">
 
     <section class="col s12 m8 l9 date-card">
       <!-- Teal page content  -->
       <form>
+        <p>Select a date and then a category for a relevant Bestsellers list</p>
         <div class="date-picker-div">
             <!-- date -->
-            <input type="text" class="datepicker">
-            <select>
+            <input type="text" class="datepicker" value="Select a Date">
+            <select id="" value="">
             <option value=“” disabled selected>Select which bestseller list...</option>
             <option value=“hardcover-fiction”>Hard Cover Fiction</option>
             <option value=“hardcover-nonfiction”>Hardcover Nonfiction</option>
@@ -80,9 +80,8 @@
             <option value=“childrens-middle-grade-hardcover”>Children’s Hardcover</option>
             </select>
         </div>
-</form>
+        </form>
         <div class="book-names-column"> <!-- do not delete-->
-
             <!-- book names -->
             <div class="row">
                 <div class="col s12 m6">
@@ -103,15 +102,6 @@
         </div><!--books-names-column end-->
 
     </section><!--date-card end-->
-
-
-
-    <aside class="col s12 m4 l3 instructions">
-        <!-- Grey navigation panel -->
-        <h3>Instructions</h3>
-        <p>Click the title of the book you want to view for more information!</p>
-
-    </aside><!--instructions-end-->
 
 </main>
  <footer class="page-footer orange">

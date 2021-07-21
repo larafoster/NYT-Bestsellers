@@ -1,3 +1,5 @@
+
+// index var
 var href;
 
 var bookNamesColumn = document.querySelector('.book-names-column'); // append rowDiv to to this var. 
@@ -30,3 +32,10 @@ const iconI = document.createElement('i'); // append to bookLinkButton
 iconI.setAttribute("class", "material-icons");
 
 iconI.textContent = '+'; 
+
+// cover var
+
+let bookCover = document.getElementById("book-cover");
+let bookTitle = document.getElementById("title");
+let bookDate = document.getElementById("date");
+let bookDesc = document.getElementById("description")
