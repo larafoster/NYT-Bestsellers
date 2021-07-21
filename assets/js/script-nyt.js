@@ -4,19 +4,17 @@ var nytApi = 'https://api.nytimes.com';
 var nytListData = '/lists/names.json'
 var apiKey = 'Xnbc5raSBOZ8T953UYXEizN4qTN8wBDX';
 
-class Fetch {
-    async getCurrent(input) {
-      var myKey = 'AIzaSyDBb6fNkW6mQhrOdRAMvFBkWXbPgt2S0ek';
-  
-  
-      var response = await fetch(
-        `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=[myKey]`
-      );
-  
-      var data = await response.json();
-  
-      console.log(data);
-  
-      return data;
-    }
-  }
+
+
+
+
+fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=' + apiKey, {method:'get',})
+.then(response => { return response.json(); }) 
+.then(json => { console.log(json); 
+    });
+
+
+
+nytimesBestSellers.results.forEach(function(book) {
+    var isbn = book.isbns[1].isbn10;  var bookInfo = book.book_details[0];
+    });
