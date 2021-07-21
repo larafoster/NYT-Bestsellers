@@ -37,14 +37,38 @@
     />
   </head>
 <body>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">OSU Bootcamp</a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a
+              href="https://github.com/larafoster/NYT-Bestsellers"
+              target="_blank"
+            >
+              github repo
+            </a>
+          </li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="https://github.com/larafoster/NYT-Bestsellers"
+              target="_blank">github repo</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+    </nav>
   <header>
-    <h1 class="header-title">Judge a Book by its Cover</h1>
+    <h1 class="header-title padding left-130">Judge a Book by its Cover</h1>
 </header>
 
 <main class="container row">
 
     <section class="col s12 m8 l9 date-card">
       <!-- Teal page content  -->
+      <form>
         <div class="date-picker-div">
             <!-- date -->
             <input type="text" class="datepicker">
@@ -55,7 +79,7 @@
             <option value=“childrens-middle-grade-hardcover”>Children’s Hardcover</option>
             </select>
         </div>
-
+</form>
         <div class="book-names-column"> <!-- do not delete-->
 
             <!-- book names -->
@@ -89,7 +113,18 @@
     </aside><!--instructions-end-->
 
 </main>
-    <footer>
+ <footer class="page-footer orange">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Project Info</h5>
+            <p class="grey-text text-lighten-4">
+              This project was developed by students at OSU Full Stack Bootcamp
+              and is intended for educational purposes only.
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="footer-copyright">
         <div class="container">
           Made by
@@ -111,6 +146,8 @@
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous">
     </script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="./assets/js/script-nyt.js"></script>
 </body>
 </html>
