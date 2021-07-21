@@ -35,3 +35,7 @@ iconI.textContent = '+';
 
 // cover var
 
+let bookCover = document.getElementById("book-cover");
+let bookTitle = document.getElementById("title");
+let bookDate = document.getElementById("date");
+let bookDesc = document.getElementById("description")
