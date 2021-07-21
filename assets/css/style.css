@@ -1,0 +1,9 @@
+.card-stacked {
+  display: flex;
+  justify-content:space-around;
+}
+
+.card-action {
+  display: flex;
+  justify-self: flex-end;
+}
