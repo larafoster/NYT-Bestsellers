@@ -9074,13 +9074,3 @@ input[type=range]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
-
-.card-stacked {
-  display: flex;
-  justify-content:space-around;
-}
-
-.card-action {
-  display: flex;
-  justify-self: flex-end;
-}

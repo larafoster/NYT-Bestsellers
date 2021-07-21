@@ -18,3 +18,14 @@ fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-ficti
 nytimesBestSellers.results.forEach(function(book) {
     var isbn = book.isbns[1].isbn10;  var bookInfo = book.book_details[0];
     });
+
+    
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+          
+  
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+        
