@@ -22,9 +22,11 @@ fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-ficti
     
 */
         
-  $(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
+$( document ).ready(function() {
+    $("#format-datepicker").datepicker({ 
+        format: 'yyyy-mm-dd'
+    });
+});
           
   
   $(document).ready(function(){
