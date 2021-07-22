@@ -42,16 +42,24 @@ let bookTitle = document.getElementById("title");
 let bookDate = document.getElementById("date");
 let bookDesc = document.getElementById("description")
 
+var datePickerDate = document.querySelector('.datepicker')
+var inputEl = document.querySelector ('#type-selector');
+var searchEl = document.querySelector ('#search-button');
+var storedList = JSON.parse (localStorage.getItem ('search')) || [];
 
-  var inputEl = document.querySelector ('#list-input');
-  var searchEl = document.querySelector ('#search-button');
-  var storedList = JSON.parse (localStorage.getItem ('search')) || [];
 
+searchEl.addEventListener ('click', function () {
+  var searchTerm = inputEl.value;
+  var dateSearch = datePickerDate.value;
+  console.log(searchTerm)
+  console.log(dateSearch);
+  getList (searchTerm);
+  storedList.push (searchTerm);
+  localStorage.setItem ('search', JSON.stringify (storedList));
+  displayStoredInfo ();
+});
 
-  searchEl.addEventListener ('click', function () {
-    var searchTerm = inputEl.value;
-    getList (searchTerm);
-    storedList.push (searchTerm);
-    localStorage.setItem ('search', JSON.stringify (storedList));
-    dosomeotherfunction ();
-  });
+displayStoredInfo ();
+  if (storedList.length > 0) {
+    getList (storedList[storedList.length - 1]);
+  }
