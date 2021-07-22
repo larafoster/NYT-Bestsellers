@@ -41,3 +41,17 @@ let bookCover = document.getElementById("book-cover");
 let bookTitle = document.getElementById("title");
 let bookDate = document.getElementById("date");
 let bookDesc = document.getElementById("description")
+
+
+  var inputEl = document.querySelector ('#list-input');
+  var searchEl = document.querySelector ('#search-button');
+  var storedList = JSON.parse (localStorage.getItem ('search')) || [];
+
+
+  searchEl.addEventListener ('click', function () {
+    var searchTerm = inputEl.value;
+    getList (searchTerm);
+    storedList.push (searchTerm);
+    localStorage.setItem ('search', JSON.stringify (storedList));
+    dosomeotherfunction ();
+  });
