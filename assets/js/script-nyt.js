@@ -3,7 +3,12 @@
 var nytApi = 'https://api.nytimes.com';
 var nytListData = '/lists/names.json'
 var apiKey = 'Xnbc5raSBOZ8T953UYXEizN4qTN8wBDX';
+var bookNamesColumn = document.querySelector('.book-names-column'); 
+var bookUl = document.createElement('ul') // append to bookNamesColumn
 
+
+
+bookNamesColumn.append(bookUl)
 
 
 
@@ -12,9 +17,53 @@ fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-ficti
 .then(response => { return response.json(); }) 
 .then(json => { console.log(json); 
 
+<<<<<<< HEAD
      json.results.slice.forEach(function(book) {
      var isbn = book.isbns[0].isbn10;  var bookInfo = book.book_details[0];
      var title = book.book_details[0].title; var description = book.book_details[0];
+=======
+     json.results.forEach(function(book) {
+      const listItem = document.createElement('li'); // append to bookUl
+      const rowDiv = document.createElement('div'); // append to listItem
+      rowDiv.setAttribute("class", "row");
+      
+      const colDiv = document.createElement('div'); // append to rowDiv
+      colDiv.setAttribute("class", "col s12 m6");
+      
+      const cardDiv = document.createElement('div'); // append to colDiv
+      cardDiv.setAttribute("class", "card blue-grey darken-1")
+      
+      const cardContentDiv = document.createElement('div'); // append to cardDiv
+      cardContentDiv.setAttribute("class", "card-content white-text")
+      
+      const cardTitleSpan = document.createElement('span'); // append to cardContentDiv
+      cardTitleSpan.setAttribute("class", "card-title")
+      
+      const titleLinkAnchor = document.createElement('a'); // append to cardTitleSpan
+      function grabLink(link) {
+          titleLinkAnchor.setAttribute('href', link)
+      }
+      
+      const descP = document.createElement('p'); // append to cardContentDiv
+      descP.setAttribute("class", "short description")
+     var isbn = book.isbns[0].isbn10;  
+     console.log(isbn);
+
+
+     cardTitleSpan.textContent = book.rank+ ' ' + book.book_details[0].title;
+
+
+     descP.textContent = book.book_details[0].description;
+
+     bookUl.append(listItem);
+     listItem.append(rowDiv);
+     rowDiv.append(cardDiv);
+     cardDiv.append(cardContentDiv);
+     cardContentDiv.append(cardTitleSpan);
+     cardTitleSpan.append(titleLinkAnchor);
+     cardContentDiv.append(descP);
+
+>>>>>>> edc2a3917011f7b2576c9568477a74e3906c1110
 
      });});
 
