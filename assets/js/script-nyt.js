@@ -1,4 +1,3 @@
-
 //https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=yourkey
 var nytApi = 'https://api.nytimes.com';
 var nytListData = '/lists/names.json'
@@ -9,55 +8,6 @@ var bookUl = document.createElement('ul') // append to bookNamesColumn
 
 bookNamesColumn.append(bookUl)
 
-<<<<<<< HEAD
-
-
-
-fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=' + apiKey, {method:'get',})
-.then(response => { return response.json(); }) 
-.then(json => { console.log(json); 
-
-     json.results.forEach(function(book) {
-      const listItem = document.createElement('li'); // append to bookUl
-      const rowDiv = document.createElement('div'); // append to listItem
-      rowDiv.setAttribute("class", "row");
-      
-      const colDiv = document.createElement('div'); // append to rowDiv
-      colDiv.setAttribute("class", "col s12 m6");
-      
-      const cardDiv = document.createElement('div'); // append to colDiv
-      cardDiv.setAttribute("class", "card blue-grey darken-1")
-      
-      const cardContentDiv = document.createElement('div'); // append to cardDiv
-      cardContentDiv.setAttribute("class", "card-content white-text")
-      
-      const cardTitleSpan = document.createElement('span'); // append to cardContentDiv
-      cardTitleSpan.setAttribute("class", "card-title")
-      
-      const titleLinkAnchor = document.createElement('a'); // append to cardTitleSpan
-      function grabLink(link) {
-          titleLinkAnchor.setAttribute('href', link)
-      }
-      
-      const descP = document.createElement('p'); // append to cardContentDiv
-      descP.setAttribute("class", "short description")
-     var isbn = book.isbns[0].isbn10;  
-     console.log(isbn);
-
-
-     cardTitleSpan.textContent = book.rank+ ' ' + book.book_details[0].title;
-
-
-     descP.textContent = book.book_details[0].description;
-
-     bookUl.append(listItem);
-     listItem.append(rowDiv);
-     rowDiv.append(cardDiv);
-     cardDiv.append(cardContentDiv);
-     cardContentDiv.append(cardTitleSpan);
-     cardTitleSpan.append(titleLinkAnchor);
-     cardContentDiv.append(descP);
-=======
 var datePickerDate = document.querySelector('.datepicker')
 var inputEl = document.querySelector ('#type-selector');
 var searchEl = document.querySelector ('#search-button');
@@ -117,10 +67,8 @@ function getList (book, date) {
        });});
 }
 
->>>>>>> 36803910d422b44e32c234e501ea26c06f571f37
 
 
-     });});
 
     
 
@@ -147,4 +95,3 @@ $( document ).ready(function() {
     localStorage.setItem ('search', JSON.stringify (storedList));
     // displayStoredInfo();
   });
-  
