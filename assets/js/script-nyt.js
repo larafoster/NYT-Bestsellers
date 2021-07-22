@@ -2,7 +2,6 @@
 //https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=yourkey
 var nytApi = 'https://api.nytimes.com';
 var nytListData = '/lists/names.json'
-var apiKey = 'Xnbc5raSBOZ8T953UYXEizN4qTN8wBDX';
 var bookNamesColumn = document.querySelector('.book-names-column'); 
 var bookUl = document.createElement('ul') // append to bookNamesColumn
 
@@ -16,26 +15,15 @@ var searchEl = document.querySelector ('#search-button');
 var storedList = JSON.parse (localStorage.getItem ('search')) || [];
 
 
-searchEl.addEventListener ('click', function () {
-  var searchTerm = inputEl.value.trim();
-  var dateSearch = datePickerDate.value;
-  console.log(searchTerm);
-  console.log(dateSearch);
-  getList(searchTerm, dateSearch, apiKey);
-  storedList.push (searchTerm);
-  localStorage.setItem ('search', JSON.stringify (storedList));
-  displayStoredInfo();
-});
 
-
-function getList (book, date, api) {
-  var queryUrl = `https://api.nytimes.com/svc/books/v3/lists/${date}/${book}.json?api-key=${api}`
+function getList (book, date) {
+  var queryUrl = `https://api.nytimes.com/svc/books/v3/lists/${date}/${book}.json?api-key=Xnbc5raSBOZ8T953UYXEizN4qTN8wBDX`
   
   fetch(queryUrl , {method:'get',})
   .then(response => { return response.json(); }) 
   .then(json => { console.log(json); 
   
-       json.results.forEach(function(book) {
+       json.results.books.forEach(function(book) {
         const listItem = document.createElement('li'); // append to bookUl
         const rowDiv = document.createElement('div'); // append to listItem
         rowDiv.setAttribute("class", "row");
@@ -63,10 +51,10 @@ function getList (book, date, api) {
        console.log(isbn);
   
   
-       cardTitleSpan.textContent = book.rank+ ' ' + book.book_details[0].title;
+       cardTitleSpan.textContent = book.rank+ ' ' + book.title;
   
   
-       descP.textContent = book.book_details[0].description;
+       descP.textContent = book.description;
   
        bookUl.append(listItem);
        listItem.append(rowDiv);
@@ -80,11 +68,7 @@ function getList (book, date, api) {
        });});
 }
 
-function displayStoredInfo() {
-  if (storedList.length > 0) {
-    getList(storedList[storedList.length - 1]);
-  }
-}
+
 
 
     
@@ -100,3 +84,16 @@ $( document ).ready(function() {
   $(document).ready(function(){
     $('select').formSelect();
   });
+
+  searchEl.addEventListener ('click', function () {
+    var searchTerm = inputEl.value.trim();
+    var dateSearch = datePickerDate.value;
+    var apiKey = 'Xnbc5raSBOZ8T953UYXEizN4qTN8wBDX';
+    console.log(searchTerm);
+    console.log(dateSearch);
+    getList(searchTerm, dateSearch);
+    storedList.push (searchTerm);
+    localStorage.setItem ('search', JSON.stringify (storedList));
+    // displayStoredInfo();
+  });
+  

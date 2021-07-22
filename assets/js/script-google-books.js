@@ -9,3 +9,10 @@ function updateCover(id, isbn) {
     img = img.replace(/^http:\/\//i, 'https://');    
     $('#cover-' + id).attr('src', img);  })   
     .catch(error=> {       console.log(error);  });}
+
+
+    function displayStoredInfo() {
+        if (storedList.length > 0) {
+          getList(storedList[storedList.length - 1]);
+        }
+      }
