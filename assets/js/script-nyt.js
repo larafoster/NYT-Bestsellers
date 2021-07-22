@@ -17,11 +17,6 @@ fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-ficti
 .then(response => { return response.json(); }) 
 .then(json => { console.log(json); 
 
-<<<<<<< HEAD
-     json.results.slice.forEach(function(book) {
-     var isbn = book.isbns[0].isbn10;  var bookInfo = book.book_details[0];
-     var title = book.book_details[0].title; var description = book.book_details[0];
-=======
      json.results.forEach(function(book) {
       const listItem = document.createElement('li'); // append to bookUl
       const rowDiv = document.createElement('div'); // append to listItem
@@ -63,7 +58,6 @@ fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-ficti
      cardTitleSpan.append(titleLinkAnchor);
      cardContentDiv.append(descP);
 
->>>>>>> edc2a3917011f7b2576c9568477a74e3906c1110
 
      });});
 
