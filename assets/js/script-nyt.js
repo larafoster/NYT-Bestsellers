@@ -17,9 +17,9 @@ var storedList = JSON.parse (localStorage.getItem ('search')) || [];
 
 
 function getList (book, date) {
-  var queryUrl = `https://api.nytimes.com/svc/books/v3/lists/${date}/${book}.json?api-key=Xnbc5raSBOZ8T953UYXEizN4qTN8wBDX`
+  var queryUrl = `https://api.nytimes.com/svc/books/v3/lists/${date}/${book}.json?api-key=Xnbc5raSBOZ8T953UYXEizN4qTN8wBDX`;
   
-  fetch(queryUrl , {method:'get',})
+  fetch(queryUrl , {method:'get',} )
   .then(response => { return response.json(); }) 
   .then(json => { console.log(json); 
   
@@ -41,17 +41,22 @@ function getList (book, date) {
         cardTitleSpan.setAttribute("class", "card-title")
         
         const titleLinkAnchor = document.createElement('a'); // append to cardTitleSpan
-        function grabLink(link) {
-            titleLinkAnchor.setAttribute('href', link)
+        titleLinkAnchor.innerHTML = book.title;
+
+        function grabLink(isbn) {
+            titleLinkAnchor.setAttribute('href', `./cover.html?q=${isbn}`)
         }
+        
         
         const descP = document.createElement('p'); // append to cardContentDiv
         descP.setAttribute("class", "short description")
        var isbn = book.isbns[0].isbn10;  
+
+       grabLink(isbn);
        console.log(isbn);
   
   
-       cardTitleSpan.textContent = book.rank+ ' ' + book.title;
+       cardTitleSpan.textContent = book.rank;
   
   
        descP.textContent = book.description;
@@ -65,7 +70,8 @@ function getList (book, date) {
        cardContentDiv.append(descP);
   
   
-       });});
+       })
+  })
 }
 
 
