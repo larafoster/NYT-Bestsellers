@@ -22,19 +22,17 @@ cardDiv.setAttribute("class", "card blue-grey darken-1")
 const cardContentDiv = document.createElement('div'); // append to cardDiv
 cardContentDiv.setAttribute("class", "card-content white-text")
 
-const titleLinkAnchor = document.createElement('a'); // append to cardContentDiv
+const cardTitleSpan = document.createElement('span'); // append to cardContentDiv
+cardTitleSpan.setAttribute("class", "card-title")
+
+const titleLinkAnchor = document.createElement('a'); // append to cardTitleSpan
 function grabLink(link) {
     titleLinkAnchor.setAttribute('href', link)
 }
 
-const cardTitleSpan = document.createElement('span'); // append titleLinkAnchor
-cardTitleSpan.setAttribute("class", "card-title")
-
-const descP = document.createElement('p'); // append to cardTitleSpan
+const descP = document.createElement('p'); // append to cardContentDiv
 descP.setAttribute("class", "short description")
 
-const cardActionDiv = document.createElement('div'); // append to cardDiv
-cardActionDiv.setAttribute("class", "card-action")
 
 
 // cover var
