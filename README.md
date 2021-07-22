@@ -39,3 +39,8 @@ Then a book cover is displayed as well as more information on said book.
 * Handling NYT API - Lara, Zachery, Lorenzo
 * Handling Open Library API - Lara, Zachery, Lorenzo
 * Bringing it all together - Lara, Zachery, Lorenzo
+
+### Initial Wireframe
+
+![screenshot of index.html](./assets/img/Wireframe-Index.png)
+![screenshot of cover.html](./assets/img/Wireframe-results.png)
