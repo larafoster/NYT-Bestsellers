@@ -1,4 +1,3 @@
-
 // index var
 var href;
 

@@ -1,9 +1,81 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
+p {
+  font-size: 1.4rem;
+}
 
+.book-names-column {
+    margin-left: 15px !important;
+
+}
+.btn {
+  margin: 20px 5px;
+}
 .collection li {
   border: none;
 }
-
+.form-card {
+  max-width: 36rem;
+  min-width: 30rem;
+  margin-left: 15px !important;
+  border: solid 1px #efefef;
+  padding: 25px;
+}
 .p-left-130 {
-    padding-left: 130px;
+  padding-left: 130px;
+}
+input {
+  text-align: left;
+}
+span.badge.new:after {
+  content: "" !important;
+}
+
+span.badge.new:before {
+  content: "RANK-" !important;
+}
+
+span.badge.new {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #26a69a;
+  border-radius: 6px;
+}
+
+span.badge {
+  min-width: 3.2rem;
+  padding: 10px;
+  line-height: 1.2rem;
+  height: 36px;
+}
+
+.card {
+  max-width: 36rem;
+  min-width: 30rem;
+}
+.card-title a {
+  color: #26a69a;
+  font-weight: 400;
+}
+
+.card-title a:hover {
+  color: #fff;
+  font-weight: 400;
+}
+
+.blue-lighten-2 {
+  color: #64b5f6;
+}
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #289af8;
+    text-align: left;
+    font-weight: 400;
+
+}
+.title3 {
+  padding: 10px 0;
+  border-bottom: #64b5f6 solid .02rem;
 }

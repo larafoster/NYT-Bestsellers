@@ -13,6 +13,15 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/ef1290e982.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -29,73 +38,109 @@
       rel="stylesheet"
       media="screen,projection"
     />
-      <link
+    <link
       href="./assets/css/spacing-helpers.css"
       type="text/css"
       rel="stylesheet"
       media="screen,projection"
     />
   </head>
-<body>
-  <header>
-    <nav class="light-blue lighten-1" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Judge a Book...</a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a
-              href="https://github.com/larafoster/NYT-Bestsellers"
-              target="_blank"
-            >
-              github repo
-            </a>
-          </li>
-        </ul>
+  <body>
+    <header>
+      <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo">Judge a Book...</a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a
+                href="https://github.com/larafoster/NYT-Bestsellers"
+                target="_blank"
+              >
+                github repo
+              </a>
+            </li>
+          </ul>
 
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="https://github.com/larafoster/NYT-Bestsellers"
-              target="_blank">github repo</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-          <i class="material-icons">menu</i>
-        </a>
-      </div>
-    </nav>
-  </header>
-
-<main class="container row">
-
-    <section class="col s12 m5 l5 date-card">
-      <!-- Teal page content  -->
-      <form>
-        <p>Select a date and then a category for a relevant Bestsellers list</p>
-        <div class="date-picker-div">
-            <!-- date -->
-         
-            <input type="text" id="format-datepicker" class="datepicker" value="Select a Date">
-            <select id="type-selector" value="type-selector">
-            <!-- <option value=“” disabled selected>Select which bestseller list...</option> -->
-            <option value=hardcover-fiction>Hard Cover Fiction</option>
-            <option value=hardcover-nonfiction>Hardcover Nonfiction</option>
-            <option value=young-adult-hardcover>Young Adult Hardcover</option>
-            <option value=childrens-middle-grade-hardcover>Children’s Hardcover</option>
-            </select>
+          <ul id="nav-mobile" class="sidenav">
+            <li>
+              <a
+                href="https://github.com/larafoster/NYT-Bestsellers"
+                target="_blank"
+              >
+                github repo
+              </a>
+            </li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
         </div>
-        <a class="waves-effect waves-light btn" id="search-button">Search</a>
-        </form>
-        <div class="book-names-column"> <!-- do not delete-->
-            <!-- book names -->
-            <ul>
-            
-            </ul>
-            <!-- book names end -->
+      </nav>
+    </header>
 
-        </div><!--books-names-column end-->
+    <main class="container row">
+      <div class="row">
+        <div class="col s12 m9 l9">
+          <h3 class="title3">
+            <i class="fad fa-books blue-lighten-2"></i> The New York Times
+            Bestsellers
+          </h3>
+          <p>
+            Find your next read here! You can search the New York Times
+            Bestsellers list by date and list type. If no new date is entered, the search will return the current bestseller list. Then click on the title to
+            Judge the Book by its Cover.
+          </p>
+        </div>
+      </div>
 
-    </section><!--date-card end-->
+      <section class="col s12 m12 l12 date-card">
+        <div class="row">
+          <div class="form-card col s12 m8 l6">
+            <!--  form content  -->
+            <form>
+              <div class="date-picker-div">
+                <!-- date -->
 
-</main>
- <footer class="page-footer orange">
+                <input
+                  type="text"
+                  id="format-datepicker"
+                  class="datepicker"
+                  value="Click to select a date"
+                />
+                <select id="type-selector" value="type-selector">
+                  <option value="“”" disabled selected>Select preferred bestseller list...
+                  </option>
+                  <option value="hardcover-fiction">Hard Cover Fiction</option>
+                  <option value="hardcover-nonfiction">Hardcover Nonfiction
+                  </option>
+                  <option value="young-adult-hardcover">Young Adult Hardcover
+                  </option>
+                  <option value="childrens-middle-grade-hardcover">Children’s Hardcover
+                  </option>
+                </select>
+              </div>
+              <a class="waves-effect waves-light btn" id="search-button">
+                Search
+              </a>
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 md5 l5">
+            <div class="book-names-column">
+              <!-- do not delete-->
+              <!-- book names -->
+              
+              <!-- book names end -->
+            </div>
+            <!--books-names-column end-->
+          </div>
+        </div>
+      </section>
+      <!--date-card end-->
+    </main>
+    <footer class="page-footer orange">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
@@ -120,17 +165,14 @@
       </div>
     </footer>
 
-  
-
     <script
-    src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous">
-    </script>
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
 
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script-nyt.js"></script>
-</body>
+  </body>
 </html>

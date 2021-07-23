@@ -3,7 +3,7 @@ var googleApiKey = 'AIzaSyDBb6fNkW6mQhrOdRAMvFBkWXbPgt2S0ek';//before apikey  &k
 var googleVolumeExample = 'volumes?q=flowers+inauthor:keyes';
 
 function updateCover(id, isbn) {  
-    fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn + "&key=" + apiKey, {method: 'get'})
+    fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn + "&key=" + googleApiKey, {method: 'get'})
     .then(response => { return response.json(); }) 
     .then(data => {var img = data.items[0].volumeInfo.imageLinks.thumbnail;
     img = img.replace(/^http:\/\//i, 'https://');    
@@ -16,3 +16,9 @@ function updateCover(id, isbn) {
           getList(storedList[storedList.length - 1]);
         }
       }
+//maybe add this to the back button to clear out any stored data - not sure if this is overstepping our bounds by clearing out localstorage?? Would it also clear out the users shopping cart on another site?
+  var clearEl = document.querySelector ('#clear-history');
+
+    clearEl.addEventListener ('click', function () {
+    localStorage.clear();
+  });
