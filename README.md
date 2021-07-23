@@ -11,6 +11,7 @@ This project is currently hosted on github pages. To use the application you can
 ## Team Pages
 * [Lorenzo Street - GitHub Repo](https://github.com/Lorenzoxst)
 * [Zachary Young - GitHub Repo](https://github.com/ZacharyYoung1)
+* [Lara Foster - GitHub Repo](https://github.com/larafoster)
 
 
 
