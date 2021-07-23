@@ -21,7 +21,7 @@ function getList (book, date) {
       return response.json ();
     })
     .then (json => {
-      console.log (json);
+      
 
       json.results.books.forEach (function (book) {
         bookNamesColumn.append(bookUl);
@@ -46,6 +46,7 @@ function getList (book, date) {
 
         const titleLinkAnchor = document.createElement ('a'); // append to cardTitleSpan
         titleLinkAnchor.innerHTML = book.title;
+        titleLinkAnchor.setAttribute('target', '_blank')
 
         function grabLink (isbn, isbn13, title, author, link ) {
           titleLinkAnchor.setAttribute ('href', `./cover.html?q=${isbn}&isbn13=${isbn13}&title=${title}&author=${author}&link=${link}`);
@@ -55,14 +56,11 @@ function getList (book, date) {
         descP.setAttribute ('class', 'short description');
         var isbn = book.isbns[0].isbn10;
         var bookAuthor = book.author;
-        console.log(bookAuthor);
         var buyLink = book.amazon_product_url;
-        console.log(buyLink);
         var title = book.title;
         var isbn13 = book.primary_isbn13;
 
         grabLink (isbn, isbn13, title, bookAuthor, buyLink);
-        console.log (isbn);
 
         badgeSpan.textContent = book.rank;
 
