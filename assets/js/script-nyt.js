@@ -4,7 +4,7 @@ var nytListData = '/lists/names.json';
 var bookNamesColumn = document.querySelector ('.book-names-column');
 var bookUl = document.createElement ('ul'); // append to bookNamesColumn
 
-bookNamesColumn.append (bookUl);
+bookNamesColumn.append(bookUl);
 
 var datePickerDate = document.querySelector ('.datepicker');
 var inputEl = document.querySelector ('#type-selector');
@@ -44,15 +44,19 @@ function getList (book, date) {
         const titleLinkAnchor = document.createElement ('a'); // append to cardTitleSpan
         titleLinkAnchor.innerHTML = book.title;
 
-        function grabLink (isbn) {
-          titleLinkAnchor.setAttribute ('href', `./cover.html?q=${isbn}`);
+        function grabLink (isbn, author, link ) {
+          titleLinkAnchor.setAttribute ('href', `./cover.html?q=${isbn}&author=${author}&link=${link}`);
         }
 
         const descP = document.createElement ('p'); // append to cardContentDiv
         descP.setAttribute ('class', 'short description');
         var isbn = book.isbns[0].isbn10;
+        var bookAuthor = book.author;
+        console.log(bookAuthor);
+        var buyLink = book.amazon_product_url;
+        console.log(buyLink);
 
-        grabLink (isbn);
+        grabLink (isbn, bookAuthor, buyLink);
         console.log (isbn);
 
         badgeSpan.textContent = book.rank;
