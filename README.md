@@ -2,11 +2,17 @@
 Judge a book by its cover. 
 This project aims to give you acess to New York Times Bestsellers of new and old. Users will be able to select a date to see Bestsellers and then find more information on those select books. 
 
-## Getting Started
+## Usage
 
 This project is currently hosted on github pages. To use the application you can follow the deployment link or download the source files to use this as a starting point/template.
 * [Deployed Application](https://larafoster.github.io/NYT-Bestsellers/)
 * [GitHub Repo](https://github.com/larafoster/NYT-Bestsellers)
+
+## Team Pages
+* [Lorenzo Street - GitHub Repo](https://github.com/Lorenzoxst)
+* [Zachary Young - GitHub Repo](https://github.com/ZacharyYoung1)
+
+
 
 ### User Stories
 As a teacher, 
@@ -29,7 +35,7 @@ And If i click on the book title within the list,
 Then a book cover is displayed as well as more information on said book.
 
 ### Apis To be used. 
-* [Open Library API](https://openlibrary.org/developers/api)
+* [Google Books API](https://developers.google.com/books/docs/overview)
 * [New York Times API](https://developer.nytimes.com/docs/books-product/1/overview)
 
 ### Tasks Breakdown
