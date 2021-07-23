@@ -46,8 +46,8 @@ function getList (book, date) {
         const titleLinkAnchor = document.createElement ('a'); // append to cardTitleSpan
         titleLinkAnchor.innerHTML = book.title;
 
-        function grabLink (isbn, author, link ) {
-          titleLinkAnchor.setAttribute ('href', `./cover.html?q=${isbn}&author=${author}&link=${link}`);
+        function grabLink (isbn, isbn13, title, author, link ) {
+          titleLinkAnchor.setAttribute ('href', `./cover.html?q=${isbn}&isbn13=${isbn13}&title=${title}&author=${author}&link=${link}`);
         }
 
         const descP = document.createElement ('p'); // append to cardContentDiv
@@ -57,8 +57,10 @@ function getList (book, date) {
         console.log(bookAuthor);
         var buyLink = book.amazon_product_url;
         console.log(buyLink);
+        var title = book.title;
+        var isbn13 = book.primary_isbn13;
 
-        grabLink (isbn, bookAuthor, buyLink);
+        grabLink (isbn, isbn13, title, bookAuthor, buyLink);
         console.log (isbn);
 
         badgeSpan.textContent = book.rank;
