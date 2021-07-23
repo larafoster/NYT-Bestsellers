@@ -17,11 +17,29 @@ p {
 #clear-search.btn  {
   background-color: #ef5350;
 }
-.collection li {
-  border: none;
+.collection{
+  border: none !important;
 }
+
+.collection .collection-item {
+    background-color: #fff;
+    line-height: 1.7rem;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.1rem;
+}
+
 main {
   min-height: 65vh;
+}
+
+.cover-card {
+  max-width: 36rem;
+  min-width: 30rem;
+  margin-left: 15px !important;
+  border: solid 1px #efefef;
+
 }
 .form-card {
   max-width: 36rem;
@@ -30,6 +48,8 @@ main {
   border: solid 1px #efefef;
   padding: 25px;
 }
+
+
 .p-left-130 {
   padding-left: 130px;
 }
@@ -85,4 +105,10 @@ span.badge {
 .title3 {
   padding: 10px 0;
   border-bottom: #64b5f6 solid .02rem;
+}
+
+
+@media (min-width: 575.98px) {  
+
+
 }
