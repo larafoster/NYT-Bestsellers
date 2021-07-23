@@ -13,6 +13,10 @@ p {
 .btn {
   margin: 20px 5px;
 }
+
+#clear-search.btn  {
+  background-color: #ef5350;
+}
 .collection li {
   border: none;
 }
