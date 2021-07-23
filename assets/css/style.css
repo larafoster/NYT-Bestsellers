@@ -6,6 +6,20 @@ p {
   font-size: 1.4rem;
 }
 
+[data-display ="hidden"] {
+  display: none;
+}
+
+[data-display ="shown"] {
+  display: block;
+}
+
+#date-validation {
+  font-size: small;
+  font-style: italic;
+  color: #ff0f0f;
+}
+
 .book-names-column {
     margin-left: 15px !important;
 

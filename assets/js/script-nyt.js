@@ -5,10 +5,11 @@ var bookNamesColumn = document.querySelector ('.book-names-column');
 var bookUl = document.createElement ('ul'); // append to bookNamesColumn
 
 
-
+var dateValidation = document.getElementById('date-validation')
 var datePickerDate = document.querySelector ('.datepicker');
 var inputEl = document.querySelector ('#type-selector');
 var searchEl = document.querySelector ('#search-button');
+var formatValidation = document.getElementById('format-validation')
 var storedList = JSON.parse (localStorage.getItem ('search')) || [];
 
 
@@ -18,7 +19,12 @@ function getList (book, date) {
 
   fetch (queryUrl, {method: 'get'})
     .then (response => {
+      if (response.status >= 200 && response.status <= 299) {
+        dateValidation.setAttribute("data-display", "hidden");
       return response.json ();
+      } else {
+        dateValidation.setAttribute("data-display", "show");
+      }
     })
     .then (json => {
       
@@ -75,7 +81,9 @@ function getList (book, date) {
         cardTitleSpan.append (titleLinkAnchor);
         cardContentDiv.append (descP);
       });
-    });
+    }).catch((error) =>{
+      console.log(error)
+    })
 }
 
 $ (document).ready (function () {
