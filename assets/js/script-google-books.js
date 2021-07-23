@@ -41,11 +41,7 @@ function updateCover() {
         amznLink.setAttribute("target", "_blank")
 
     })
-//     .catch(error =>(){       console.log(error);  
 
-//     $('#' + book.rank).attr('nyt-rank', book.rank);
-//     updateCover(book.rank, isbn);
-// });}
 }
     function displayStoredInfo() {
         if (storedList.length > 0) {
