@@ -11,6 +11,8 @@ var inputEl = document.querySelector ('#type-selector');
 var searchEl = document.querySelector ('#search-button');
 var storedList = JSON.parse (localStorage.getItem ('search')) || [];
 
+
+
 function getList (book, date) {
   var queryUrl = `https://api.nytimes.com/svc/books/v3/lists/${date}/${book}.json?api-key=Xnbc5raSBOZ8T953UYXEizN4qTN8wBDX`;
 
@@ -96,3 +98,11 @@ searchEl.addEventListener ('click', function () {
   localStorage.setItem ('search', JSON.stringify (storedList));
   // displayStoredInfo();
 });
+
+
+//clear localstorage to enable new search
+  var clearSearchEl = document.querySelector ('#clear-search');
+
+    clearSearchEl.addEventListener ('click', function () {
+    location.reload ();
+  });

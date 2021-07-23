@@ -30,7 +30,7 @@ function updateCover(id, isbn) {
           getList(storedList[storedList.length - 1]);
         }
       }
-//maybe add this to the back button to clear out any stored data - not sure if this is overstepping our bounds by clearing out localstorage?? Would it also clear out the users shopping cart on another site?
+//clear localstorage to enable new search
   var clearEl = document.querySelector ('#clear-history');
 
     clearEl.addEventListener ('click', function () {
