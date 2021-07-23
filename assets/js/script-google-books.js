@@ -26,7 +26,7 @@ function updateCover() {
         let author = document.getElementById("author");
         let bookDate = document.getElementById("date");
         let bookDesc = document.getElementById("description")
-
+        let amznLink = document.getElementById("link")
         
             if (mediaQuery.matches) {
                 bookCover.setAttribute("src", img)
@@ -35,7 +35,8 @@ function updateCover() {
             }
         
         bookTitle.innerHTML = title;
-        author.innerHTML = bookAuthor;
+        author.innerHTML = "Author: " + bookAuthor;
+        amznLink.setAttribute('href', buyLink)
 
     })
 //     .catch(error =>(){       console.log(error);  
