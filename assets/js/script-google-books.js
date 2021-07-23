@@ -8,8 +8,11 @@ function updateCover(id, isbn) {
     .then(data => {var img = data.items[0].volumeInfo.imageLinks.thumbnail;
     img = img.replace(/^http:\/\//i, 'https://');    
     $('#cover-' + id).attr('src', img);  })   
-    .catch(error=> {       console.log(error);  });}
+    .catch(error=> {       console.log(error);  
 
+    $('#' + book.rank).attr('nyt-rank', book.rank);
+    updateCover(book.rank, isbn);
+});}
 
     function displayStoredInfo() {
         if (storedList.length > 0) {
