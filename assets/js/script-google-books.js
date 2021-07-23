@@ -31,12 +31,14 @@ function updateCover() {
             if (mediaQuery.matches) {
                 bookCover.setAttribute("src", img)
             } else {
-                bookCover.setAttribute("src", `https://storage.googleapis.com/du-prd/books/images/${isbn13}.jpg`)
+                bookCover.setAttribute("src", `https://storage.googleapis.com/du-prd/books/images/${isbn13}.jpg`);
+                
             }
         
         bookTitle.innerHTML = title;
         author.innerHTML = "Author: " + bookAuthor;
-        amznLink.setAttribute('href', buyLink)
+        amznLink.setAttribute('href', buyLink);
+        amznLink.setAttribute("target", "_blank")
 
     })
 //     .catch(error =>(){       console.log(error);  

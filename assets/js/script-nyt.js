@@ -4,7 +4,7 @@ var nytListData = '/lists/names.json';
 var bookNamesColumn = document.querySelector ('.book-names-column');
 var bookUl = document.createElement ('ul'); // append to bookNamesColumn
 
-bookNamesColumn.append(bookUl);
+
 
 var datePickerDate = document.querySelector ('.datepicker');
 var inputEl = document.querySelector ('#type-selector');
@@ -24,6 +24,7 @@ function getList (book, date) {
       console.log (json);
 
       json.results.books.forEach (function (book) {
+        bookNamesColumn.append(bookUl);
         const listItem = document.createElement ('li'); // append to bookUl
         const rowDiv = document.createElement ('div'); // append to listItem
         rowDiv.setAttribute ('class', 'row');
@@ -89,12 +90,9 @@ $ (document).ready (function () {
   $ ('select').formSelect ();
 });
 
-searchEl.addEventListener ('click', function () {
+searchEl.addEventListener('click', function () {
   var searchTerm = inputEl.value.trim ();
   var dateSearch = datePickerDate.value;
-  var apiKey = 'Xnbc5raSBOZ8T953UYXEizN4qTN8wBDX';
-  console.log (searchTerm);
-  console.log (dateSearch);
   getList (searchTerm, dateSearch);
   storedList.push (searchTerm);
   localStorage.setItem ('search', JSON.stringify (storedList));
