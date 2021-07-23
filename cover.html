@@ -6,18 +6,26 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1.0"
     />
-    <title>Results - Judge a Book - the Cover</title>
+    <title>Judge a Book by its Cover</title>
 
     <!-- CSS  -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/ef1290e982.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-
     <link
       href="./assets/css/materialize.css"
       type="text/css"
@@ -30,7 +38,7 @@
       rel="stylesheet"
       media="screen,projection"
     />
-        <link
+    <link
       href="./assets/css/spacing-helpers.css"
       type="text/css"
       rel="stylesheet"
@@ -63,8 +71,12 @@
     </nav>
 
      <main class="container row margin top-40">
-      <div class="col s12 m6">
+     <div class="row">
+      <div class="col s12 m12 l12">
         <a class="waves-effect waves-light btn" id="clear-history" href="./index.html">Back to search</a>
+
+      <section class="col s12 m12 l12">
+
         <div class="card horizontal margin top-40">
           <div class="card-image">
 
@@ -78,15 +90,17 @@
 
       <li class="collection-item" id="title">Title:</li>
       <li class="collection-item" id="author">Author</li>
-      <li class="collection-item" id="date">Date:</li>
-      <li class="collection-item" id="description">Description</li>
+      <li class="collection-item" id="amazon">
+      <a href="#"> View this book on amazon <i class="fad fa-external-link"></i></a>
+      </li>
 
     </ul>
 
           </div>
         </div>
+        </section>
       </div>
-
+</div>
 
 
       <br />
