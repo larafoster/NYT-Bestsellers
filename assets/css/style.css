@@ -16,6 +16,9 @@ p {
 .collection li {
   border: none;
 }
+main {
+  min-height: 65vh;
+}
 .form-card {
   max-width: 36rem;
   min-width: 30rem;
